@@ -5,91 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hashim Jama | Software Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav>
+    <nav id="navbar">
         <div class="container nav-content">
-            <a href="#" class="logo">H<span>.</span></a>
+            <a href="#" class="logo">Hashim<span>.dev</span></a>
             <ul class="nav-links">
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- HERO -->
     <section id="hero">
         <div class="container">
-            <h1 class="hero-title">
-                Hi, I'm <span>Hashim</span>
-            </h1>
-            <h2 class="hero-subtitle">
-                <span id="typewriter"></span>
-            </h2>
-            <div style="margin-top: 30px;">
+            <h1 class="hero-title">Hi, I'm <span>Hashim Jama</span></h1>
+            <p class="hero-subtitle">Able to build <span id="typewriter"></span></p>
+            <div class="hero-btns">
                 <a href="#projects" class="btn btn-primary">View Portfolio</a>
                 <a href="#contact" class="btn btn-outline">Get In Touch</a>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="card">
-                    <div class="project-img-container">
-                        <img src="images/Weatherapp.png" alt="Weather App">
-                    </div>
-                    <h3>Weather App</h3>
-                    <p>Displays real-time weather data using APIs.</p>
-                </div>
-                <div class="card">
-                    <div class="project-img-container">
-                        <img src="images/chess.png" alt="Chess Engine">
-                    </div>
-                    <h3>Chess Engine</h3>
-                    <p>AI-based chess game with move prediction.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE -->
     <section id="experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="card">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="card experience-card">
                 <div class="card-header">
-                    <span class="company">Your Company</span>
-                    <span class="date">2024</span>
+                    <div>
+                        <h3>Software Engineering Intern</h3>
+                        <p class="company">myAIpathway Inc.</p>
+                    </div>
+                    <span class="date">May 2025 – Aug 2025</span>
                 </div>
                 <ul class="bullet-list">
-                    <li>Worked on backend systems</li>
-                    <li>Built scalable APIs</li>
+                    <li>Optimized production backend services by streamlining SQL queries and implementing distributed caching strategies.</li>
+                    <li>Engineered modular TypeScript UI components to bridge the gap between complex AI logic and user-facing interfaces.</li>
+                    <li>Maintained high-reliability standards, achieving 95% test coverage across core application services.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Work</h2>
+            <div class="projects-grid">
+                
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="images/Screenshot 2026-03-16 at 12.59.01.png" alt="Canadian Property Predictor Dashboard">
+                    </div>
+                    <div class="card-content">
+                        <h3>Canadian Property Predictor</h3>
+                        <p>An end-to-end machine learning pipeline designed to predict Canadian housing prices using economic indicators. It features a Streamlit dashboard that enables interactive scenario analysis and property valuations.</p>
+                        <div class="tags"><span>Streamlit</span><span>Scikit-Learn</span><span>Python</span></div>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="images/neural.png" alt="Neural Translation">
+                    </div>
+                    <div class="card-content">
+                        <h3>Neural Machine Translator</h3>
+                        <p>A Transformer-based translation system built with TensorFlow for English-French translation. This project utilizes attention mechanisms to capture context and long-range dependencies, achieving a BLEU score of 27.4.</p>
+                        <div class="tags"><span>TensorFlow</span><span>Python</span><span>NLP</span></div>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="images/study.png" alt="StudySync">
+                    </div>
+                    <div class="card-content">
+                        <h3>StudySync Collaborative Hub</h3>
+                        <p>A real-time collaborative platform using Django Channels and WebSockets. It automates the matching of students into study groups and supports instantaneous chat and resource sharing.</p>
+                        <div class="tags"><span>Django</span><span>WebSockets</span><span>SQLite</span></div>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="images/chess.png" alt="Chess AI">
+                    </div>
+                    <div class="card-content">
+                        <h3>Minimax Chess Engine</h3>
+                        <p>An intelligent chess opponent that employs a recursive Minimax algorithm with Alpha-Beta pruning. It evaluates board states using piece-square tables to optimize tactical decision-making in real-time.</p>
+                        <div class="tags"><span>Python</span><span>AI</span><span>Pygame</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-card">
                 <p>Feel free to reach out via email:</p>
                 <a href="mailto:hashimabdigani2@gmail.com" class="btn btn-primary email-btn">
-                    ✉️ Send me an email
+                    <i class="fas fa-envelope"></i> Send me an email
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- SCRIPT (only typewriter) -->
     <script src="script.js"></script>
 </body>
 </html>
