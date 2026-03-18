@@ -3,402 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hashim Jama -  Portfolio Website</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-    (function(){
-        emailjs.init({
-            publicKey: "xUg0Kj1lLYJvQuzRC",
-        });
-    })();
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="#" class="logo">Hashim<span>Jama</span></a>
-                <ul class="nav-links">
-                    <li><a href="#hero" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span>Hashim Jama</span></h1>
-                <a href="#contact" class="cta-btn">Get In Touch</a>
-            </div>
-        </div>
-        <div class="hero-bg">
-            <div class="floating-shapes">
-                <div class="shape1"></div>
-                <div class="shape2"></div>
-                <div class="shape3"></div>
-                <div class="shape4"></div>
-            </div>
-        </div>
-    </section>
+<!-- NAVBAR -->
+<nav>
+    <div class="container nav-content">
+        <a href="#" class="logo">H<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Hi, I'm Hashim Jama, a passionate Computer Science student eager to apply my technical skills and problem-solving mindset in a real-world setting. I have a strong foundation in programming, data structures, and software development, with hands-on experience with languages such as Python, Java and C.  
-                        
-                        I'm particularly interested in areas like software engineering , Databse Management, AI/ML, or web Development and I love working on projects that challenge me to learn and grow. Whether it's building web applications, optimizing algorithms, or exploring new frameworks, I’m always excited to dive into innovative solutions.  
-                        
-                        Currently, I'm seeking an internship opportunity where I can contribute, learn from experienced professionals, and refine my technical and analytical skills.
-                    </p>
-                    <div class="about-details">
-                        <div class="detail-item">
-                            <span class="detail-icon"><i class="fas fa-user-graduate"></i></span>
-                            <div class="detail-info">
-                                <h4>Education</h4>
-                                <p>Wilfrid Laurier University, Bachelor of science, Computer Science</p>
-                            </div>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <div class="detail-info">
-                                <h4>Location</h4>
-                                <p>Missiauga, ON</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
- <!-- Skills Section -->
-<section id="skills">
+<!-- HERO -->
+<section id="hero">
     <div class="container">
-        <h2 class="section-title">My Skills</h2>
-        <div class="skills-content">
-            <div class="skills-text">
-                <p>
-                    A dedicated developer skilled in various programming languages and frameworks. I build functional applications by drawing on my knowledge of code organization, efficient solutions, and thoughtful design approaches                </p>
-            </div>
-            
-            <!-- Technical Skills with Icons -->
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Technical Skills</h3>
-                    <div class="skills-icon-grid">
-                        <!-- Programming Languages -->
-                        <div class="skill-icon-wrapper" data-skill="Java">
-                            <div class="skill-icon">
-                                <i class="fab fa-java"></i>
-                            </div>
-                        </div>
-                        <div class="skill-icon-wrapper" data-skill="Python">
-                            <div class="skill-icon">
-                                <i class="fab fa-python"></i>
-                            </div>
-                        </div>
-                        <div class="skill-icon-wrapper" data-skill="JavaScript">
-                            <div class="skill-icon">
-                                <i class="fab fa-js-square"></i>
-                            </div>
-                        </div>
-                        <div class="skill-icon-wrapper" data-skill="HTML/CSS">
-                            <div class="skill-icon">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                        </div>
-                        <div class="skill-icon-wrapper" data-skill="SQL">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                        </div>
+        <h1 class="hero-title">
+            Hi, I'm <span>Hashim</span>
+        </h1>
+        <h2 class="hero-subtitle">
+            <span id="typewriter"></span>
+        </h2>
 
-                        <!-- C -->
-                        <div class="skill-icon-wrapper" data-skill="C">
-                            <div class="skill-icon">
-                                <i class="devicon-c-plain"></i>
-                            </div>
-                        </div>
-
-                        <!-- C++ -->
-                        <div class="skill-icon-wrapper" data-skill="C++">
-                            <div class="skill-icon">
-                                <i class="devicon-cplusplus-plain"></i>
-                            </div>
-                        </div>
-                        
-                        <!-- Frameworks & Libraries -->
-                        <div class="skill-icon-wrapper" data-skill="Django">
-                            <div class="skill-icon">
-                                <i class="devicon-django-plain"></i>
-                            </div>
-                        </div>
-                        <div class="skill-icon-wrapper" data-skill="TensorFlow">
-                            <div class="skill-icon">
-                                <i class="devicon-tensorflow-original"></i>
-                            </div>
-                        </div>
-
-                        <div class="skill-icon-wrapper" data-skill="Pygame">
-                            <div class="skill-icon">
-                                <i class="devicon-python-plain"></i>
-                            </div>
-                        </div>
-                        
-                        <!-- Developer Tools -->
-                        <div class="skill-icon-wrapper" data-skill="Git">
-                            <div class="skill-icon">
-                                <i class="fab fa-git-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Concepts Section - Text-based skill tags -->
-                <div class="skill-category full-width">
-                    <h3>Concepts & Knowledge Areas</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Data Structures</span>
-                        <span class="skill-tag">Algorithm Design</span>
-                        <span class="skill-tag">Object-Oriented Programming</span>
-                        <span class="skill-tag">Data Visualization</span>
-                        <span class="skill-tag">Multithreading</span>
-                        <span class="skill-tag">Transformer Architecture</span>
-                        <span class="skill-tag">API Integration</span>
-                        <span class="skill-tag">UI/UX Design</span>
-                    </div>
-                </div>
-            </div>
+        <div style="margin-top: 30px;">
+            <a href="#projects" class="btn btn-primary">View Portfolio</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
         </div>
     </div>
 </section>
 
-<!-- Projects Section -->
+<!-- PROJECTS -->
 <section id="projects">
     <div class="container">
-        <h2 class="section-title">My Projects</h2>
+        <h2 class="section-title">Projects</h2>
+
         <div class="projects-grid">
-            <!-- Java Code Editor Project -->
-            <div class="project-card">
-                <div class="project-content-wrapper">
-                    <div class="project-image">
-                        <img src="images/Java.png" alt="Java Code Editor">
-                    </div>
 
-                    <div class="project-tags">
-                        <span class="project-tag">Java</span>
-                        <span class="project-tag">Swing</span>
-                        <span class="project-tag">Desktop App</span>
-                    </div>
-                    <h3 class="project-title">Java Code Editor</h3>
-                    <p class="project-description">
-                        A feature-rich code editor built in Java with Swing. Features include syntax highlighting for multiple programming languages, file management with tabs, find and replace with regex support, code formatting, and code execution. The application includes a modern UI with themes, line numbering, and undo/redo functionality.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/Hashimiite/Custom-IDE" class="project-link">Source Code</a>
-                    </div>
+            <div class="card">
+                <div class="project-img-container">
+                    <img src="images/Weatherapp.png" alt="">
                 </div>
+                <h3>Weather App</h3>
+                <p>Displays real-time weather data using APIs.</p>
             </div>
 
-            <!-- Neural Machine Translator Project -->
-            <div class="project-card">
-                <div class="project-content-wrapper">
-                    <!-- Project Image -->
-                    <div class="project-image">
-                        <img src="images/neural.png" alt="Neural Machine Translator">
-                    </div>
-
-                    <div class="project-tags">
-                        <span class="project-tag">TensorFlow</span>
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">NLP</span>
-                        <span class="project-tag">Transformer</span>
-                    </div>
-                    <h3 class="project-title">Neural Machine Translator</h3>
-                    <p class="project-description">
-                        A neural machine translation system built using the Transformer architecture. This project implements a complete translation pipeline with attention mechanisms for English-French translation. Features include custom tokenization, positional encoding, multi-head attention, and beam search decoding. The model achieves high-quality translations by capturing long-range dependencies and context.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/Hashimiite/Transformer-based-Translator-model" class="project-link">Source Code</a>
-                        
-                    </div>
+            <div class="card">
+                <div class="project-img-container">
+                    <img src="images/chess.png" alt="">
                 </div>
+                <h3>Chess Engine</h3>
+                <p>AI-based chess game with move prediction.</p>
             </div>
 
-            <!-- StudySync Project -->
-            <div class="project-card">
-                <div class="project-content-wrapper">
-                    <div class="project-image">
-                        <img src="images/study.png" alt="StudySync - Collaborative Learning Platform">
-                    </div>
-
-                    <div class="project-tags">
-                        <span class="project-tag">Django</span>
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">Web App</span>
-                    </div>
-                    <h3 class="project-title">StudySync - Collaborative Learning Platform</h3>
-                    <p class="project-description">
-                        StudySync is a web application built with Django that helps students form and manage study groups. The platform includes features such as user authentication, group creation, real-time chat, file sharing, and personalized study profiles. StudySync makes collaborative learning more accessible and organized for university students.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/Hashimiite/StudySync" class="project-link">Source Code</a>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <!-- Chess AI Project -->
-            <div class="project-card">
-                <div class="project-content-wrapper">
-                    <div class="project-image">
-                        <img src="images/chess.png" alt="Chess AI Game">
-                    </div>
-
-                    <div class="project-tags">
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">AI</span>
-                        <span class="project-tag">Game</span>
-                    </div>
-                    <h3 class="project-title">Chess AI</h3>
-                    <p class="project-description">
-                        A chess engine with an AI opponent that uses the Minimax algorithm with Alpha-Beta pruning. Features include position evaluation, piece-square tables for positional strategy, and a depth-first search that looks several moves ahead to make intelligent decisions.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/Hashimiite/Python-Chess-Engine" class="project-link">Source Code</a>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <!-- AdBlocker Pro Project -->
-            <div class="project-card">
-                <div class="project-content-wrapper">
-                    <div class="project-image">
-                        <img src="images/adblocker.png" alt="AdBlocker Pro Chrome Extension">
-                    </div>
-
-                    <div class="project-tags">
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">Chrome Extension</span>
-                        <span class="project-tag">Ad Blocking</span>
-                    </div>
-                    <h3 class="project-title">AdBlocker Pro</h3>
-                    <p class="project-description">
-                        A high-performance Chrome extension that blocks ads, trackers, and malicious content. Features include whitelisting, real-time statistics, and custom filter management. Built with JavaScript using Chrome's declarativeNetRequest API for efficient content filtering.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/Hashimiite/Custom-AdBlocker" class="project-link">Source Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Weather App Project -->
-            <div class="project-card">
-                <div class="project-content-wrapper">
-                    <div class="project-image">
-                        <img src="images/Weatherapp.png" alt="Weather App">
-                    </div>
-
-                    <div class="project-tags">
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">Weather API</span>
-                        <span class="project-tag">Responsive</span>
-                    </div>
-                    <h3 class="project-title">Weather App</h3>
-                    <p class="project-description">
-                        A responsive weather application that provides real-time weather information for any location. Features include search suggestions, detailed weather data display, and visual weather representations. The app utilizes the OpenWeatherMap API to fetch current weather conditions.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/Hashimiite/Weather-app" class="project-link">Source Code</a>
-                        
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
 
+        <div class="card">
+            <div class="card-header">
+                <span class="company">Your Company</span>
+                <span class="date">2024</span>
+            </div>
+            <ul class="bullet-list">
+                <li>Worked on backend systems</li>
+                <li>Built scalable APIs</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-<!-- Update your contact section with this code -->
+<!-- CONTACT -->
 <section id="contact">
     <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div>
-                        <h3>Email</h3>
-                        <p>hashimabdigani2@gmail.com</p>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/hashim-jama-b3a644338/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/Hashimiite" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                </div>
+        <h2 class="section-title">Contact</h2>
+
+        <form id="contact-form">
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
             </div>
-            
-            <div class="contact-form-container">
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" ="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        </div>
+            <textarea name="message" rows="5" placeholder="Message"></textarea>
+            <button type="submit" class="btn btn-primary full-width">Send</button>
+        </form>
     </div>
 </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Hashim<span>Jama</span></div>
-                <p>&copy; 2025 All Rights Reserved</p>
-            </div>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+<!-- SCRIPT -->
+<script type="module" src="script.js"></script>
+
 </body>
 </html>
