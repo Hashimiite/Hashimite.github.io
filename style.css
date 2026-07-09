@@ -69,11 +69,18 @@ nav {
 
 .card-header { display: flex; justify-content: space-between; margin-bottom: 15px; }
 .company { color: var(--accent); font-weight: 600; font-size: 1.1rem; }
-.date { color: var(--text-dim); font-size: 0.85rem; }
+.date { color: var(--text-dim); font-size: 0.85rem; text-align: right; }
 
 .bullet-list { list-style: none; }
 .bullet-list li { position: relative; padding-left: 25px; margin-bottom: 12px; color: var(--text-dim); }
 .bullet-list li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+
+.experience-card + .experience-card { margin-top: 30px; }
+
+/* About */
+.about-text { color: var(--text-dim); font-size: 1.1rem; max-width: 700px; margin-bottom: 40px; }
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.skills-group h4 { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; margin-bottom: 12px; }
 
 /* Projects Grid */
 .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
@@ -109,6 +116,7 @@ nav {
 
 @media (max-width: 768px) {
     .projects-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
     .btn-outline { margin-left: 0; margin-top: 15px; width: 100%; text-align: center; }
     .btn-primary { width: 100%; text-align: center; }
 
