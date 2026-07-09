@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+    }
+
     const typewriter = document.getElementById('typewriter');
     const items = ["Scalable AI Systems", "Robust Backend Logic", "Collaborative Platforms"];
     let itemIdx = 0, charIdx = 0, isDeleting = false;

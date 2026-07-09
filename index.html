@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hashim Jama | Software Engineer</title>
+    <meta name="description" content="Hashim Jama is a software engineer specializing in backend systems and applied machine learning. Explore his projects, experience, and how to get in touch.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hashimjama.dev">
+    <meta property="og:title" content="Hashim Jama | Software Engineer">
+    <meta property="og:description" content="Software engineer specializing in backend systems and applied machine learning. Explore projects, experience, and contact info.">
+    <meta property="og:image" content="https://hashimjama.dev/images/property-predictor.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,7 +20,10 @@
     <nav id="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">Hashim<span>.dev</span></a>
-            <ul class="nav-links">
+            <button id="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -60,7 +71,7 @@
             <div class="projects-grid">
                 <div class="card project-card">
                     <div class="project-img-container">
-                        <img src="images/Screenshot 2026-03-16 at 12.59.01.png" alt="Canadian Property Predictor Dashboard">
+                        <img src="images/property-predictor.png" alt="Canadian Property Predictor Dashboard">
                     </div>
                     <div class="card-content">
                         <h3>Canadian Property Predictor</h3>
