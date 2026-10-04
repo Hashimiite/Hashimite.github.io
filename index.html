@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -143,9 +143,12 @@
                     </div>
                     <div class="feature-copy">
                         <h3>AI powered feed engine</h3>
-                        <p>A FastAPI service that ranks posts per user by interest match, quality, recency, and click history, then diversifies topics so one subject can't take over. Feeds are cached in Redis and invalidated on every click, new posts are pushed to interested users over WebSockets, and Locust simulates traffic against it.</p>
-                        <ul class="tags"><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>WebSockets</li><li>Locust</li></ul>
-                        <a class="link" href="https://github.com/Hashimiite/personalized-feed-engine" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for AI powered feed engine, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
+                        <p>A FastAPI service that ranks posts per user by interest match, quality, recency, and click history, then diversifies topics so one subject can't take over. Feeds are cached in Redis and invalidated on every click, and new posts are pushed to interested users over WebSockets. The whole stack runs in Docker Compose, and GitHub Actions lints, tests, and smoke tests the container on every push.</p>
+                        <ul class="tags"><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>WebSockets</li><li>Docker</li><li>GitHub Actions</li></ul>
+                        <p class="links">
+                            <a class="link" href="https://github.com/Hashimiite/personalized-feed-engine" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for AI powered feed engine, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
+                            <a class="link" href="https://github.com/Hashimiite/personalized-feed-engine/actions/workflows/ci.yml" target="_blank" rel="noopener noreferrer">CI runs<span class="sr-only"> for AI powered feed engine, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
+                        </p>
                     </div>
                 </article>
 
