@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -37,6 +37,7 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
+        <div class="progress" aria-hidden="true"></div>
         <nav class="container nav" aria-label="Primary">
             <a href="#top" class="logo">hashim<span>.dev</span></a>
             <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
@@ -47,6 +48,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="nav-ink" aria-hidden="true"></li>
             </ul>
         </nav>
     </header>
@@ -55,16 +57,16 @@
         <section class="hero" id="top">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <h1>Hashim Jama</h1>
-                    <p class="lede">Software engineer focused on backend systems and applied AI. I build the services that put LLMs into real products: APIs, data pipelines, and the reliability work that keeps them up.</p>
-                    <p class="status"><span class="status-dot" aria-hidden="true"></span><span>Open to software engineering roles<br>Previously Software Engineering Intern at myAIpathway</span></p>
-                    <div class="hero-actions">
+                    <h1 class="hero-in" style="--i: 0">Hashim Jama</h1>
+                    <p class="lede hero-in" style="--i: 1">Software engineer focused on backend systems and applied AI. I build the services that put LLMs into real products: APIs, data pipelines, and the reliability work that keeps them up.</p>
+                    <p class="status hero-in" style="--i: 2"><span class="status-dot" aria-hidden="true"></span><span>Open to software engineering roles<br>Previously Software Engineering Intern at myAIpathway</span></p>
+                    <div class="hero-actions hero-in" style="--i: 3">
                         <a href="#work" class="btn btn-primary">See my work</a>
                         <a href="#contact" class="btn btn-ghost">Get in touch</a>
                     </div>
                 </div>
 
-                <div class="terminal" aria-hidden="true">
+                <div class="terminal hero-in" style="--i: 4" aria-hidden="true">
                     <div class="terminal-bar"><i></i><i></i><i></i><span>support api · logs</span></div>
                     <ol class="terminal-log anim">
                         <li><b>POST</b> /chat/session <em>201</em> 38ms</li>
@@ -81,7 +83,7 @@
 
         <section id="about" class="section">
             <div class="container split">
-                <h2 class="section-label">About</h2>
+                <h2 class="section-label wipe">About</h2>
                 <div>
                     <p class="about-text">I'm a Computer Science graduate from Wilfrid Laurier University. Most of my work sits between backend systems and applied AI: chat backends that keep context, retrieval pipelines, and the caching and retry logic that makes them dependable.</p>
                     <p class="about-text">I like taking a project from a rough idea to something people actually use, and I'm looking for a software engineering role where I can keep doing that.</p>
@@ -98,7 +100,7 @@
 
         <section id="experience" class="section">
             <div class="container split">
-                <h2 class="section-label">Experience &amp; education</h2>
+                <h2 class="section-label wipe">Experience &amp; education</h2>
                 <div>
                     <article class="job">
                         <header class="job-head">
@@ -125,10 +127,10 @@
 
         <section id="work" class="section">
             <div class="container">
-                <h2 class="section-label">Selected work</h2>
+                <h2 class="section-label wipe">Selected work</h2>
 
                 <article class="feature">
-                    <div class="viz viz-feed" aria-hidden="true">
+                    <div class="wipe viz viz-feed" aria-hidden="true">
                         <div class="viz-head"><span>feed · user 42</span><span class="live">live</span></div>
                         <ol class="feed-list">
                             <li><i>ml</i><span>New paper on sparse attention</span><b>0.91</b></li>
@@ -146,7 +148,7 @@
                 </article>
 
                 <article class="feature feature-flip">
-                    <div class="viz viz-sync" aria-hidden="true">
+                    <div class="wipe viz viz-sync" aria-hidden="true">
                         <div class="viz-head"><span># CP312 study group</span><span class="online">3 online</span></div>
                         <div class="sync-body">
                             <div class="match">
@@ -179,7 +181,7 @@
 
                 <div class="more">
                     <article class="mini">
-                        <div class="viz viz-attn" aria-hidden="true">
+                        <div class="wipe viz viz-attn" aria-hidden="true">
                             <svg viewBox="0 0 544 260" class="anim">
                                 <g class="faint"><line x1="92" y1="92" x2="212" y2="172"/><line x1="212" y1="92" x2="92" y2="172"/><line x1="332" y1="92" x2="452" y2="172"/><line x1="452" y1="92" x2="332" y2="172"/><line x1="92" y1="92" x2="332" y2="172"/></g>
                                 <line class="a a1" x1="92" y1="92" x2="92" y2="172"/>
@@ -198,7 +200,7 @@
                     </article>
 
                     <article class="mini">
-                        <div class="viz viz-chart" aria-hidden="true">
+                        <div class="wipe viz viz-chart" aria-hidden="true">
                             <svg viewBox="0 0 544 260" class="anim">
                                 <g class="grid"><line x1="24" y1="80" x2="520" y2="80"/><line x1="24" y1="140" x2="520" y2="140"/><line x1="24" y1="200" x2="520" y2="200"/></g>
                                 <path class="band" d="M330 120 L390 100 L450 92 L515 72 L515 150 L450 148 L390 140 Z"/>
@@ -215,7 +217,7 @@
                     </article>
 
                     <article class="mini">
-                        <div class="viz viz-chess" aria-hidden="true">
+                        <div class="wipe viz viz-chess" aria-hidden="true">
                             <div class="board anim">
                                 <span class="sq from"></span>
                                 <span class="sq to"></span>
@@ -233,7 +235,7 @@
                     </article>
 
                     <article class="mini">
-                        <div class="viz viz-ad" aria-hidden="true">
+                        <div class="wipe viz viz-ad" aria-hidden="true">
                             <div class="ad-page anim">
                                 <p class="ad-url">dailynews.example/article</p>
                                 <div class="ad-text"><i></i><i></i><i></i></div>
@@ -260,7 +262,7 @@
 
         <section id="contact" class="section contact">
             <div class="container">
-                <h2 class="section-label">Contact</h2>
+                <h2 class="section-label wipe">Contact</h2>
                 <p class="contact-lead">I'm looking for software engineering roles. The fastest way to reach me is email.</p>
                 <div class="contact-row">
                     <a class="email" href="mailto:hashimabdigani2@gmail.com">hashimabdigani2@gmail.com</a>
@@ -282,6 +284,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=4" defer></script>
+    <script src="script.js?v=5" defer></script>
 </body>
 </html>

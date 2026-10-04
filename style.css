@@ -12,6 +12,8 @@
     --sans: 'Geist', system-ui, -apple-system, sans-serif;
     --mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
     --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -71,7 +73,13 @@ p { text-wrap: pretty; }
     transition: color 0.2s;
 }
 .nav-links a:hover, .nav-links a[aria-current="true"] { color: var(--text); }
-.nav-links a[aria-current="true"] { box-shadow: 0 1px 0 var(--accent); }
+.nav-links { position: relative; }
+.nav-ink {
+    position: absolute; left: 0; bottom: -8px;
+    width: 1px; height: 1px; background: var(--accent);
+    transform-origin: left; opacity: 0;
+    transition: transform 250ms var(--ease-in-out), opacity 150ms ease;
+}
 .nav-cta { border: 1px solid var(--line); padding: 6px 14px; border-radius: 6px; }
 
 .nav-toggle {
@@ -95,9 +103,9 @@ p { text-wrap: pretty; }
     min-height: 46px; padding: 0 22px;
     font: 500 0.95rem var(--sans);
     border-radius: 8px; text-decoration: none; cursor: pointer;
-    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+    transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, transform 160ms var(--ease-out);
 }
-.btn:active { transform: translateY(1px) scale(0.98); }
+.btn:active { transform: scale(0.97); }
 .btn-primary { background: var(--accent); color: #1a1206; border: 1px solid var(--accent); }
 .btn-primary:hover { background: #f2b562; }
 .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
@@ -110,7 +118,9 @@ p { text-wrap: pretty; }
 }
 .links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .link span { transition: transform 0.2s var(--ease); }
-.link:hover span { transform: translate(2px, -2px); }
+@media (hover: hover) and (pointer: fine) {
+    .link:hover span { transform: translate(2px, -2px); }
+}
 
 /* Hero */
 .hero {
@@ -457,3 +467,35 @@ html { scrollbar-color: #3a3733 var(--bg); accent-color: var(--accent); caret-co
     .email { display: inline-block; padding: 12px 0; }
     .copy { min-height: 44px; }
 }
+
+/* Motion: one hero entrance on load, then each section wipes in once as it is reached */
+.hero-in { animation: rise 640ms var(--ease-out) both; animation-delay: calc(var(--i) * 70ms + 80ms); }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+.terminal-log li { animation: print 260ms var(--ease-out) both; }
+.terminal-log li:nth-child(1) { animation-delay: 560ms; }
+.terminal-log li:nth-child(2) { animation-delay: 650ms; }
+.terminal-log li:nth-child(3) { animation-delay: 740ms; }
+.terminal-log li:nth-child(4) { animation-delay: 830ms; }
+.terminal-log li:nth-child(5) { animation-delay: 920ms; }
+.terminal-log li:nth-child(6) { animation-delay: 1010ms; }
+.terminal-log li:nth-child(7) { animation-delay: 1100ms; }
+@keyframes print { from { opacity: 0; transform: translateX(-6px); } }
+
+.js .wipe { clip-path: inset(0 0 100% 0); transition: clip-path 600ms var(--ease-in-out), border-color 300ms ease; }
+.js .wipe[data-visible] { clip-path: inset(0 0 0 0); }
+
+/* Reading progress, driven by scroll where the browser supports it */
+.progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left; }
+@supports (animation-timeline: scroll()) {
+    .progress { animation: grow linear both; animation-timeline: scroll(root); }
+}
+@keyframes grow { to { transform: scaleX(1); } }
+
+@media (max-width: 640px) { .nav-ink { display: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-in, .terminal-log li { animation: fade-in 300ms ease both !important; }
+    .js .wipe { clip-path: none; }
+    .progress { display: none; }
+}
+@keyframes fade-in { from { opacity: 0; } }

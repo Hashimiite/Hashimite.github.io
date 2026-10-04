@@ -20,6 +20,21 @@ const player = new IntersectionObserver(entries => {
 }, { threshold: 0.4 });
 document.querySelectorAll('.anim').forEach(el => player.observe(el));
 
+// Sections wipe in once, the first time they are reached
+const wiper = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.setAttribute('data-visible', ''); wiper.unobserve(e.target); } });
+}, { rootMargin: '0px 0px -12% 0px' });
+document.querySelectorAll('.wipe').forEach(el => wiper.observe(el));
+
+// Slide one underline to whichever nav link is current
+const ink = links.querySelector('.nav-ink');
+const moveInk = () => {
+    const a = links.querySelector('a[aria-current="true"]');
+    ink.style.opacity = a ? 1 : 0;
+    if (a) ink.style.transform = `translateX(${a.offsetLeft}px) scaleX(${a.offsetWidth})`;
+};
+addEventListener('resize', moveInk);
+
 // Highlight the nav link for the section in view
 const navLinks = [...links.querySelectorAll('a[href^="#"]')];
 const spy = new IntersectionObserver(entries => {
@@ -28,6 +43,7 @@ const spy = new IntersectionObserver(entries => {
         navLinks.forEach(a => a.getAttribute('href') === '#' + e.target.id
             ? a.setAttribute('aria-current', 'true')
             : a.removeAttribute('aria-current'));
+        moveInk();
     });
 }, { rootMargin: '-45% 0px -50% 0px' });
 document.querySelectorAll('main section[id]').forEach(s => spy.observe(s));
