@@ -484,18 +484,10 @@ html { scrollbar-color: #3a3733 var(--bg); accent-color: var(--accent); caret-co
 .js .wipe { clip-path: inset(0 0 100% 0); transition: clip-path 600ms var(--ease-in-out), border-color 300ms ease; }
 .js .wipe[data-visible] { clip-path: inset(0 0 0 0); }
 
-/* Reading progress, driven by scroll where the browser supports it */
-.progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left; }
-@supports (animation-timeline: scroll()) {
-    .progress { animation: grow linear both; animation-timeline: scroll(root); }
-}
-@keyframes grow { to { transform: scaleX(1); } }
-
 @media (max-width: 640px) { .nav-ink { display: none; } }
 
 @media (prefers-reduced-motion: reduce) {
     .hero-in, .terminal-log li { animation: fade-in 300ms ease both !important; }
     .js .wipe { clip-path: none; }
-    .progress { display: none; }
 }
 @keyframes fade-in { from { opacity: 0; } }

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hashim Jama</title>
-    <meta name="description" content="Hashim Jama builds reliable software end to end: APIs, data, interfaces, and applied AI. Projects, experience, and contact details.">
+    <meta name="description" content="Hashim Jama builds software and works with data. See his projects, experience and contact details.">
     <link rel="canonical" href="https://hashimjama.dev/">
     <meta name="theme-color" content="#0e0d0c">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hashimjama.dev/">
     <meta property="og:title" content="Hashim Jama">
-    <meta property="og:description" content="Reliable software end to end: APIs, data, interfaces, and applied AI.">
+    <meta property="og:description" content="Software, data and applied AI projects by Hashim Jama.">
     <meta property="og:image" content="https://hashimjama.dev/images/og.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=8">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -37,7 +37,6 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-        <div class="progress" aria-hidden="true"></div>
         <nav class="container nav" aria-label="Primary">
             <a href="#top" class="logo">hashim<span>.dev</span></a>
             <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
@@ -58,8 +57,8 @@
             <div class="container hero-grid">
                 <div class="hero-copy">
                     <h1 class="hero-in" style="--i: 0">Hashim Jama</h1>
-                    <p class="lede hero-in" style="--i: 1">I build reliable software end to end, from databases and APIs to the interfaces and models on top of them. Most of my work is backend and applied AI, and I'm just as at home shaping data or shipping a frontend.</p>
-                    <p class="status hero-in" style="--i: 2"><span class="status-dot" aria-hidden="true"></span><span>Open to new roles<br>Previously Software Engineering Intern at myAIpathway</span></p>
+                    <p class="lede hero-in" style="--i: 1">I build software and work with data. Most of my projects pair a dependable backend with a model or an analysis on top. I enjoy turning raw data into something people use.</p>
+                    <p class="status hero-in" style="--i: 2"><span class="status-dot" aria-hidden="true"></span><span>Open to new roles<br>Previously a software engineering intern at myAIpathway</span></p>
                     <div class="hero-actions hero-in" style="--i: 3">
                         <a href="#work" class="btn btn-primary">See my work</a>
                         <a href="#contact" class="btn btn-ghost">Get in touch</a>
@@ -85,8 +84,8 @@
             <div class="container split">
                 <h2 class="section-label wipe">About</h2>
                 <div>
-                    <p class="about-text">I'm a Computer Science graduate from Wilfrid Laurier University. During my internship I integrated LLMs into a Node.js backend, and on my own I've built a realtime study app with Next.js and Supabase, a Transformer written from scratch, and a scikit-learn model that forecasts housing prices.</p>
-                    <p class="about-text">I care most about the parts that make software last: clear data models, tested and containerized services, and interfaces that are easy to use. I'm happy wherever that work lives, whether it's an API, a data pipeline, or a model.</p>
+                    <p class="about-text">I studied Computer Science at Wilfrid Laurier University. During my internship at myAIpathway I connected large language models to a Node.js backend. On my own time I've built a live study app with Next.js and Supabase. I've also written a Transformer from scratch and trained a model that forecasts Canadian housing prices.</p>
+                    <p class="about-text">Whatever I'm building, I want the data well organized and the code tested and easy to run. Most of all I want the results to make sense to the people who rely on them.</p>
 
                     <dl class="skills">
                         <div><dt>Languages</dt><dd>Python, Java, TypeScript, JavaScript, SQL, C#, C++, C</dd></div>
@@ -107,13 +106,13 @@
                     <article class="job">
                         <header class="job-head">
                             <h3>Software Engineering Intern <span>· myAIpathway Inc.</span></h3>
-                            <p class="meta">May to Dec 2025 · Remote</p>
+                            <p class="meta">May to December 2025 · Remote</p>
                         </header>
                         <ul class="job-points">
-                            <li>Designed an indexed MySQL schema that sped up log retrieval by 40%, and built a product cache that cut overhead by 60%.</li>
-                            <li>Built a Node.js/Express backend for an AI support system that handles long conversations and generates prompts on the fly.</li>
-                            <li>Integrated LLMs with retry logic for rate limit errors, plus a stateless API to track session handoffs.</li>
-                            <li>Wrote an LLM context engine using a GPT tokenizer and sliding window truncation so every prompt stays within the model's limit.</li>
+                            <li>Designed an indexed MySQL schema that made log retrieval 40% faster, then added a product cache that reduced overhead by 60%.</li>
+                            <li>Built the Node.js and Express backend for an AI support assistant that kept track of long conversations and wrote its own prompts as each one unfolded.</li>
+                            <li>Added retry logic so LLM calls recovered from rate limits and created a stateless API to track when conversations were handed off.</li>
+                            <li>Wrote a context engine that counted tokens and trimmed older messages so every prompt fit within the model's limit.</li>
                         </ul>
                     </article>
 
@@ -143,7 +142,7 @@
                     </div>
                     <div class="feature-copy">
                         <h3>AI powered feed engine</h3>
-                        <p>A FastAPI service that ranks posts per user by interest match, quality, recency, and click history, then diversifies topics so one subject can't take over. Feeds are cached in Redis and invalidated on every click, and new posts are pushed to interested users over WebSockets. The whole stack runs in Docker Compose, and GitHub Actions lints, tests, and smoke tests the container on every push.</p>
+                        <p>This FastAPI service builds a personalized feed for every user. Each post is scored on how well it matches the user's interests, its quality, how recent it is and how often it gets clicked. The feed then mixes in other topics so no single subject takes over. Feeds are cached in Redis and refreshed whenever a user clicks something. New posts reach interested users right away over WebSockets. The whole stack runs in Docker Compose alongside Postgres and Redis. On every push, GitHub Actions lints the code, runs the tests against real databases and starts the full stack as a smoke test.</p>
                         <ul class="tags"><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>WebSockets</li><li>Docker</li><li>GitHub Actions</li></ul>
                         <p class="links">
                             <a class="link" href="https://github.com/Hashimiite/personalized-feed-engine" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for AI powered feed engine, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
@@ -175,7 +174,7 @@
                     </div>
                     <div class="feature-copy">
                         <h3>StudySync</h3>
-                        <p>A Next.js and Supabase app that pairs students with study partners. A Postgres function scores matches on shared courses, overlapping study times, and learning style. Group chat and file sharing stream live over Supabase Realtime, triggers raise notifications, and Postgres security policies guard every table.</p>
+                        <p>StudySync is a Next.js and Supabase app that helps students find study partners and groups. A Postgres function scores every possible match on shared courses, overlapping study times and learning style, so the best fits appear first. Group chats and shared files update live through Supabase Realtime. Database triggers send a notification when someone joins your group or posts a message. Row level security makes sure students only see the groups and conversations they belong to.</p>
                         <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Postgres</li><li>Realtime</li></ul>
                         <p class="links">
                             <a class="link" href="https://studysync-hashimi.vercel.app" target="_blank" rel="noopener noreferrer">Live demo<span class="sr-only"> of StudySync, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
@@ -199,7 +198,7 @@
                             </svg>
                         </div>
                         <h3>Neural machine translator</h3>
-                        <p>An English to French Transformer built from scratch in TensorFlow, with eight attention heads, positional encoding, masking, and the learning rate warmup schedule from the original paper. Six encoder and decoder layers, trained on WMT14 with subword tokenizers.</p>
+                        <p>I built this English to French translator from scratch in TensorFlow, following the design of the original Transformer paper. It uses eight attention heads, positional encoding, masking and the paper's warmup learning rate schedule. The model has six encoder layers and six decoder layers, which I trained on the WMT14 dataset using subword tokenizers.</p>
                         <ul class="tags"><li>TensorFlow</li><li>Python</li><li>NLP</li></ul>
                         <a class="link" href="https://github.com/Hashimiite/Neural-Machine-Translation-System" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for Neural machine translator, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
                     </article>
@@ -217,7 +216,7 @@
                             </svg>
                         </div>
                         <h3>Canadian property predictor</h3>
-                        <p>A complete ML pipeline that predicts Canadian housing prices. Tuned Random Forest and Gradient Boosting models reached R² 0.89, and a Streamlit app runs scenario analysis on the forecast.</p>
+                        <p>This machine learning pipeline predicts Canadian housing prices using pandas and scikit-learn. After I tuned its Random Forest and Gradient Boosting models, it reached an R² of 0.89. A Streamlit app lets you try different scenarios and see how the forecast changes.</p>
                         <ul class="tags"><li>scikit-learn</li><li>pandas</li><li>Streamlit</li></ul>
                     </article>
 
@@ -234,7 +233,7 @@
                             <p class="viz-note">negamax · αβ pruning · depth 3</p>
                         </div>
                         <h3>Minimax chess engine</h3>
-                        <p>A Pygame chess game with full move rules, including castling, en passant, and pin detection. The AI searches three moves deep with negamax and alpha beta pruning in its own process, so the board keeps animating while it thinks.</p>
+                        <p>I built this chess game in Pygame to follow the full rules, including castling and en passant. It also tracks pinned pieces, so it never allows a move that would leave a king in check. The computer opponent looks three moves ahead using negamax with alpha beta pruning. Its search runs in a separate process so the board keeps animating while it thinks.</p>
                         <ul class="tags"><li>Python</li><li>Pygame</li><li>multiprocessing</li></ul>
                         <a class="link" href="https://github.com/Hashimiite/Python-Chess-Engine" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for Minimax chess engine, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
                     </article>
@@ -257,7 +256,7 @@
                             </div>
                         </div>
                         <h3>AdBlocker Pro</h3>
-                        <p>A Chrome extension that blocks ad, tracker, and social widget requests at the network layer with declarativeNetRequest, then removes ad elements and iframes that pages inject later. The popup counts blocks today and all time, with a whitelist for trusted sites.</p>
+                        <p>This Chrome extension filters network requests to stop ads, trackers and social widgets before they load. If a page slips an ad in later, the extension spots it and removes it right away. The popup shows how many items it has blocked today and in total. From there you can also pause blocking or allow sites you trust.</p>
                         <ul class="tags"><li>JavaScript</li><li>Chrome MV3</li><li>declarativeNetRequest</li></ul>
                         <a class="link" href="https://github.com/Hashimiite/Custom-AdBlocker" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for AdBlocker Pro, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
                     </article>
@@ -268,7 +267,7 @@
         <section id="contact" class="section contact">
             <div class="container">
                 <h2 class="section-label wipe">Contact</h2>
-                <p class="contact-lead">I'm open to new roles. The fastest way to reach me is email.</p>
+                <p class="contact-lead">I'm looking for my next role in software or data. Email is the quickest way to reach me.</p>
                 <div class="contact-row">
                     <a class="email" href="mailto:hashimabdigani2@gmail.com">hashimabdigani2@gmail.com</a>
                     <button class="btn btn-ghost copy" type="button" data-copy="hashimabdigani2@gmail.com">Copy</button>
@@ -289,6 +288,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=5" defer></script>
+    <script src="script.js?v=8" defer></script>
 </body>
 </html>
