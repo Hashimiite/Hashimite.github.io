@@ -137,7 +137,7 @@ p { text-wrap: pretty; }
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 12px;
-    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
     overflow: hidden;
     font: 400 0.8rem/1.9 var(--mono);
 }
@@ -284,13 +284,10 @@ p { text-wrap: pretty; }
     93%, 100% { opacity: 0; }
 }
 .typing { display: flex; gap: 4px; padding: 10px 12px; align-self: flex-start; animation: pop 10s var(--ease) infinite both; }
-.typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--text-dim); animation: bounce 1s infinite; }
-.typing i:nth-child(2) { animation-delay: 0.15s; }
-.typing i:nth-child(3) { animation-delay: 0.3s; }
-@keyframes bounce { 0%, 60%, 100% { transform: none; opacity: 0.4; } 30% { transform: translateY(-4px); opacity: 1; } }
+.typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--text-dim); opacity: 0.5; }
 
 /* SVG visuals */
-.viz svg { display: block; width: 100%; height: 100%; }
+.viz svg { display: block; width: 100%; height: 100%; padding: 12px; }
 .viz svg text { font: 400 11px var(--mono); fill: var(--text-dim); }
 .grid line, .faint line { stroke: var(--line); stroke-width: 1; }
 .hist, .fcst { fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; }
@@ -338,7 +335,7 @@ p { text-wrap: pretty; }
 .js .anim.is-playing, .js .anim.is-playing * { animation-play-state: running; }
 
 /* Contact */
-.contact-lead { font-size: clamp(1.5rem, 3.2vw, 2.2rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.25; max-width: 22em; }
+.contact-lead { font-size: clamp(1.5rem, 3.2vw, 2.2rem); font-weight: 500; letter-spacing: -0.025em; line-height: 1.3; max-width: 22em; }
 .contact-row { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; margin-top: 36px; }
 .email {
     font: 400 clamp(1rem, 2.4vw, 1.3rem) var(--mono);
