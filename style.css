@@ -108,6 +108,7 @@ p { text-wrap: pretty; }
     font-size: 0.92rem; font-weight: 500;
     color: var(--accent); text-decoration: none;
 }
+.links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .link span { transition: transform 0.2s var(--ease); }
 .link:hover span { transform: translate(2px, -2px); }
 
@@ -203,7 +204,7 @@ p { text-wrap: pretty; }
 .feature + .feature { padding-top: 72px; border-top: 1px solid var(--line); }
 .feature-flip .viz { order: 2; }
 .feature-copy h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; }
-.feature-copy p:not(.kicker) { margin-top: 16px; color: var(--text-dim); max-width: 34em; }
+.feature-copy p:not(.kicker, .links) { margin-top: 16px; color: var(--text-dim); max-width: 34em; }
 .kicker { font: 400 0.8rem var(--mono); color: var(--text-dim); margin-bottom: 12px; }
 
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 24px; }
