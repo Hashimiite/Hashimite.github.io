@@ -67,3 +67,11 @@ if (feed && !reduceMotion) {
             });
     }, 2600);
 }
+
+// AdBlocker visual: tick the "blocked today" counter while visible
+const adCount = document.querySelector('.ad-count');
+if (adCount && !reduceMotion) {
+    let n = +adCount.dataset.count, adVisible = false;
+    new IntersectionObserver(([e]) => { adVisible = e.isIntersecting; }).observe(adCount);
+    setInterval(() => { if (adVisible) adCount.textContent = ++n; }, 1800);
+}

@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -47,8 +47,6 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <!-- ponytail: uncomment once resume.pdf is added to the repo root -->
-                <!-- <li><a href="resume.pdf" class="nav-cta">Résumé</a></li> -->
             </ul>
         </nav>
     </header>
@@ -131,92 +129,133 @@
 
                 <article class="feature reveal">
                     <div class="viz viz-feed" aria-hidden="true">
-                        <div class="viz-head"><span>feed · ranked</span><span class="live">live</span></div>
+                        <div class="viz-head"><span>feed · user 42</span><span class="live">live</span></div>
                         <ol class="feed-list">
-                            <li><span>Fed holds rates; bond yields dip</span><b>0.91</b></li>
-                            <li><span>Chipmaker beats on data-center revenue</span><b>0.87</b></li>
-                            <li><span>Oil slides as OPEC+ signals output hike</span><b>0.74</b></li>
-                            <li><span>TSX opens higher on energy rally</span><b>0.62</b></li>
+                            <li><i>ml</i><span>New paper on sparse attention</span><b>0.91</b></li>
+                            <li><i>systems</i><span>Postgres ships async I/O</span><b>0.84</b></li>
+                            <li><i>design</i><span>Variable fonts in production</span><b>0.72</b></li>
+                            <li><i>ml</i><span>Distilling small LLMs</span><b>0.66</b></li>
                         </ol>
                     </div>
                     <div class="feature-copy">
-                        <p class="kicker">Real-time ranking · RAG</p>
-                        <h3>AI-powered financial news feed</h3>
-                        <p>A real-time feed built on FastAPI and PostgreSQL. A multi-signal ranking engine orders stories per user, and a LangChain RAG assistant writes summaries from live market data. Redis caching cut backend overhead by 50%; the WebSocket layer was load-tested with Locust.</p>
-                        <ul class="tags"><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>LangChain</li><li>WebSockets</li></ul>
+                        <p class="kicker">Ranking · caching · WebSockets</p>
+                        <h3>AI-powered feed engine</h3>
+                        <p>A FastAPI service that ranks posts per user by interest match, quality, recency, and click history, then diversifies topics so one subject can't take over. Feeds are cached in Redis and invalidated on every click, new posts are pushed to interested users over WebSockets, and Locust simulates traffic against it.</p>
+                        <ul class="tags"><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>WebSockets</li><li>Locust</li></ul>
                         <a class="link" href="https://github.com/Hashimiite/personalized-feed-engine" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
                     </div>
                 </article>
 
                 <article class="feature feature-flip reveal">
-                    <div class="viz viz-chat" aria-hidden="true">
-                        <div class="viz-head"><span># cp322-midterm</span><span>4 online</span></div>
-                        <div class="chat anim">
-                            <p class="msg">anyone done q3 yet?</p>
-                            <p class="msg me">yeah, it's a DP problem. sharing my notes</p>
-                            <p class="msg file me">📄 q3-recurrence.pdf</p>
-                            <p class="msg">legend. library at 4?</p>
-                            <p class="typing"><i></i><i></i><i></i></p>
+                    <div class="viz viz-sync" aria-hidden="true">
+                        <div class="viz-head"><span># cp-312 study group</span><span class="online">3 online</span></div>
+                        <div class="sync-body">
+                            <div class="match">
+                                <p class="match-label">Top match</p>
+                                <p class="match-score">92</p>
+                                <ul>
+                                    <li>2 shared courses</li>
+                                    <li>3 overlapping study times</li>
+                                    <li>same learning style</li>
+                                </ul>
+                            </div>
+                            <div class="chat anim">
+                                <p class="msg">anyone free for the midterm review?</p>
+                                <p class="msg me">yes, library at 4. uploading notes</p>
+                                <p class="msg file me">📄 recurrences.pdf</p>
+                                <p class="msg">perfect, see you there</p>
+                            </div>
                         </div>
                     </div>
                     <div class="feature-copy">
-                        <p class="kicker">Real-time collaboration</p>
+                        <p class="kicker">Matching · realtime · Postgres</p>
                         <h3>StudySync</h3>
-                        <p>A study hub that matches students with partners and groups. Event-driven WebSockets deliver group chat in under a second, which lifted retention by 15%. A notification engine driven by database signals added another 15% in engagement, and query tuning cut round trips by 20%.</p>
-                        <ul class="tags"><li>Django</li><li>WebSockets</li><li>SQLite</li></ul>
+                        <p>A Next.js and Supabase app that pairs students with study partners. A Postgres function scores matches on shared courses, overlapping study times, and learning style. Group chat and file sharing stream live over Supabase Realtime, triggers raise notifications, and row-level security guards every table.</p>
+                        <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Postgres</li><li>Realtime</li></ul>
                         <a class="link" href="https://github.com/Hashimiite/StudySync" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
                     </div>
                 </article>
 
                 <div class="more">
                     <article class="mini reveal">
-                        <div class="viz viz-chart" aria-hidden="true">
-                            <svg viewBox="0 0 320 150" class="anim">
-                                <g class="grid"><line x1="0" y1="40" x2="320" y2="40"/><line x1="0" y1="80" x2="320" y2="80"/><line x1="0" y1="120" x2="320" y2="120"/></g>
-                                <path class="band" d="M190 70 L230 58 L270 52 L310 40 L310 84 L270 86 L230 82 L190 70 Z"/>
-                                <polyline class="hist" pathLength="1" points="10,118 40,110 70,112 100,96 130,90 160,80 190,70"/>
-                                <polyline class="fcst" pathLength="1" points="190,70 230,70 270,69 310,62"/>
-                                <circle class="dot" cx="190" cy="70" r="4"/>
-                                <text x="12" y="24">R² 0.89</text>
+                        <div class="viz viz-attn" aria-hidden="true">
+                            <svg viewBox="0 0 544 260" class="anim">
+                                <g class="faint"><line x1="92" y1="92" x2="212" y2="172"/><line x1="212" y1="92" x2="92" y2="172"/><line x1="332" y1="92" x2="452" y2="172"/><line x1="452" y1="92" x2="332" y2="172"/><line x1="92" y1="92" x2="332" y2="172"/></g>
+                                <line class="a a1" x1="92" y1="92" x2="92" y2="172"/>
+                                <line class="a a2" x1="212" y1="92" x2="332" y2="172"/>
+                                <line class="a a3" x1="332" y1="92" x2="212" y2="172"/>
+                                <line class="a a4" x1="452" y1="92" x2="452" y2="172"/>
+                                <g class="tok"><text x="92" y="76">the</text><text x="212" y="76">black</text><text x="332" y="76">cat</text><text x="452" y="76">sleeps</text></g>
+                                <g class="tok fr"><text x="92" y="200">le</text><text x="212" y="200">chat</text><text x="332" y="200">noir</text><text x="452" y="200">dort</text></g>
+                                <text class="note" x="20" y="242">8 heads · 6 layers · d_model 512</text>
                             </svg>
                         </div>
-                        <h3>Canadian property predictor</h3>
-                        <p>End-to-end ML pipeline predicting Canadian housing prices. Tuned Random Forest and Gradient Boosting models reached R² 0.89 with 30% faster training, and a Streamlit app runs what-if scenarios.</p>
-                        <ul class="tags"><li>scikit-learn</li><li>pandas</li><li>Streamlit</li></ul>
+                        <p class="kicker">Transformer · TensorFlow</p>
+                        <h3>Neural machine translator</h3>
+                        <p>An English-to-French Transformer built from scratch in TensorFlow: multi-head attention, positional encoding, masking, and the warm-up learning-rate schedule from the original paper. Six encoder and decoder layers, trained on WMT14 with subword tokenizers.</p>
+                        <ul class="tags"><li>TensorFlow</li><li>Python</li><li>NLP</li></ul>
+                        <a class="link" href="https://github.com/Hashimiite/Neural-Machine-Translation-System" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
                     </article>
 
                     <article class="mini reveal">
-                        <div class="viz viz-attn" aria-hidden="true">
-                            <svg viewBox="0 0 320 150" class="anim">
-                                <g class="faint"><line x1="40" y1="42" x2="120" y2="108"/><line x1="120" y1="42" x2="40" y2="108"/><line x1="200" y1="42" x2="280" y2="108"/><line x1="280" y1="42" x2="200" y2="108"/><line x1="40" y1="42" x2="200" y2="108"/></g>
-                                <line class="a a1" x1="40" y1="42" x2="40" y2="108"/>
-                                <line class="a a2" x1="120" y1="42" x2="200" y2="108"/>
-                                <line class="a a3" x1="200" y1="42" x2="120" y2="108"/>
-                                <line class="a a4" x1="280" y1="42" x2="280" y2="108"/>
-                                <g class="tok"><text x="40" y="30">the</text><text x="120" y="30">black</text><text x="200" y="30">cat</text><text x="280" y="30">sleeps</text></g>
-                                <g class="tok fr"><text x="40" y="128">le</text><text x="120" y="128">chat</text><text x="200" y="128">noir</text><text x="280" y="128">dort</text></g>
+                        <div class="viz viz-chart" aria-hidden="true">
+                            <svg viewBox="0 0 544 260" class="anim">
+                                <g class="grid"><line x1="24" y1="80" x2="520" y2="80"/><line x1="24" y1="140" x2="520" y2="140"/><line x1="24" y1="200" x2="520" y2="200"/></g>
+                                <path class="band" d="M330 120 L390 100 L450 92 L515 72 L515 150 L450 148 L390 140 Z"/>
+                                <polyline class="hist" pathLength="1" points="30,204 80,190 130,194 180,168 230,158 280,140 330,120"/>
+                                <polyline class="fcst" pathLength="1" points="330,120 390,120 450,118 515,108"/>
+                                <circle class="dot" cx="330" cy="120" r="6"/>
+                                <text x="24" y="44">R² 0.89</text>
+                                <text class="acc" x="420" y="44">forecast →</text>
                             </svg>
                         </div>
-                        <h3>Neural machine translator</h3>
-                        <p>English-to-French Transformer in TensorFlow with a full encoder-decoder, positional encoding, and multi-head attention. Scores 27.4 BLEU on WMT14.</p>
-                        <ul class="tags"><li>TensorFlow</li><li>Transformers</li><li>NLP</li></ul>
-                        <a class="link" href="https://github.com/Hashimiite/Neural-Machine-Translation-System" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
+                        <p class="kicker">Regression · forecasting</p>
+                        <h3>Canadian property predictor</h3>
+                        <p>An end-to-end ML pipeline that predicts Canadian housing prices. Tuned Random Forest and Gradient Boosting models reached R² 0.89, and a Streamlit app runs what-if scenarios on the forecast.</p>
+                        <ul class="tags"><li>scikit-learn</li><li>pandas</li><li>Streamlit</li></ul>
                     </article>
 
                     <article class="mini reveal">
                         <div class="viz viz-chess" aria-hidden="true">
                             <div class="board anim">
+                                <span class="sq from"></span>
+                                <span class="sq to"></span>
+                                <span class="pc bk">♚</span>
                                 <span class="pc bp">♟</span>
                                 <span class="pc wn">♞</span>
-                                <span class="pc bk">♚</span>
                                 <span class="pc wk">♚</span>
                             </div>
-                            <p class="viz-note">negamax · α-β · depth 4</p>
+                            <p class="viz-note">negamax · α-β · depth 3</p>
                         </div>
+                        <p class="kicker">Search · game engine</p>
                         <h3>Minimax chess engine</h3>
-                        <p>Python engine with full FIDE rules, including castling, en passant, and pin detection. Alpha-beta pruning halves the search space for 3–4 ply lookahead in under a second, and the AI runs in its own process to keep rendering at ~60 FPS.</p>
-                        <ul class="tags"><li>Python</li><li>Pygame</li><li>Search</li></ul>
+                        <p>A Pygame chess game with full move rules, including castling, en passant, and pin detection. The AI searches three moves deep with negamax and alpha-beta pruning in its own process, so the board keeps animating while it thinks.</p>
+                        <ul class="tags"><li>Python</li><li>Pygame</li><li>multiprocessing</li></ul>
                         <a class="link" href="https://github.com/Hashimiite/Python-Chess-Engine" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
+                    </article>
+
+                    <article class="mini reveal">
+                        <div class="viz viz-ad" aria-hidden="true">
+                            <div class="ad-page anim">
+                                <p class="ad-url">news-site.example/article</p>
+                                <div class="ad-text"><i></i><i></i><i></i></div>
+                                <div class="ad-slot side"><span class="ad-live">ad</span><span class="ad-gone">ad removed<small>doubleclick.net</small></span></div>
+                                <div class="ad-slot wide"><span class="ad-live">tracking pixel</span><span class="ad-gone">tracker blocked<small>google-analytics.com</small></span></div>
+                            </div>
+                            <div class="ad-popup">
+                                <p class="ad-name">AdBlocker Pro</p>
+                                <p class="ad-count" data-count="214">214</p>
+                                <p class="ad-cap">blocked today</p>
+                                <p class="ad-total">3,902</p>
+                                <p class="ad-cap">all time</p>
+                                <p class="ad-toggle"><i></i>on</p>
+                            </div>
+                        </div>
+                        <p class="kicker">Chrome extension · Manifest V3</p>
+                        <h3>AdBlocker Pro</h3>
+                        <p>A Chrome extension that blocks ad, tracker, and social-widget requests at the network layer with declarativeNetRequest, then removes ad elements and iframes that pages inject later. The popup counts blocks today and all time, with a per-site whitelist.</p>
+                        <ul class="tags"><li>JavaScript</li><li>Chrome MV3</li><li>declarativeNetRequest</li></ul>
+                        <a class="link" href="https://github.com/Hashimiite/Custom-AdBlocker" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
                     </article>
                 </div>
             </div>
@@ -246,6 +285,6 @@
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js?v=2" defer></script>
 </body>
 </html>
