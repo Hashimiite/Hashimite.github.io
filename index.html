@@ -211,13 +211,14 @@
                                 <polyline class="hist" pathLength="1" points="30,204 80,190 130,194 180,168 230,158 280,140 330,120"/>
                                 <polyline class="fcst" pathLength="1" points="330,120 390,120 450,118 515,108"/>
                                 <circle class="dot" cx="330" cy="120" r="6"/>
-                                <text x="24" y="44">R² 0.89</text>
+                                <text x="24" y="44">R² 0.95</text>
                                 <text class="acc" x="420" y="44">forecast →</text>
                             </svg>
                         </div>
                         <h3>Canadian property predictor</h3>
-                        <p>This machine learning pipeline predicts Canadian housing prices using pandas and scikit-learn. After I tuned its Random Forest and Gradient Boosting models, it reached an R² of 0.89. A Streamlit app lets you try different scenarios and see how the forecast changes.</p>
+                        <p>This machine learning pipeline forecasts Canadian house prices by province using Statistics Canada data from 1990 onward. I compared a Random Forest with a Gradient Boosting model by training on 1990 to 2017 and testing on the years since. The Random Forest won with an R² of 0.95 and predicts each year's growth, which lets a Streamlit app project prices from 2026 as far as 2100 under different economic scenarios. Matplotlib and Seaborn charts show how both models performed.</p>
                         <ul class="tags"><li>scikit-learn</li><li>pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>Streamlit</li></ul>
+                        <a class="link" href="https://github.com/Hashimiite/canadian-property-predictor" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for Canadian property predictor, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
                     </article>
 
                     <article class="mini">
