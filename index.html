@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -55,17 +55,17 @@
         <section class="hero" id="top">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Open to full-time roles</p>
                     <h1>Hashim Jama</h1>
                     <p class="lede">Software engineer focused on backend systems and applied AI. I build the services that put LLMs into real products: APIs, data pipelines, and the reliability work that keeps them up.</p>
+                    <p class="status"><span class="status-dot" aria-hidden="true"></span><span>Open to software engineering roles<br>Previously Software Engineering Intern at myAIpathway</span></p>
                     <div class="hero-actions">
                         <a href="#work" class="btn btn-primary">See my work</a>
                         <a href="#contact" class="btn btn-ghost">Get in touch</a>
                     </div>
                 </div>
 
-                <div class="terminal reveal" aria-hidden="true">
-                    <div class="terminal-bar"><i></i><i></i><i></i><span>support-api · logs</span></div>
+                <div class="terminal" aria-hidden="true">
+                    <div class="terminal-bar"><i></i><i></i><i></i><span>support api · logs</span></div>
                     <ol class="terminal-log anim">
                         <li><b>POST</b> /chat/session <em>201</em> 38ms</li>
                         <li><b>POST</b> /chat/message <em>200</em> 412ms</li>
@@ -83,10 +83,10 @@
             <div class="container split">
                 <h2 class="section-label">About</h2>
                 <div>
-                    <p class="about-text reveal">I'm a Computer Science graduate from Wilfrid Laurier University. Most of my work sits between backend systems and applied AI: context-aware chat backends, retrieval pipelines, and the caching and retry logic that makes them dependable.</p>
-                    <p class="about-text reveal">I like taking a project from a rough idea to something people actually use, and I'm looking for a full-time software engineering role where I can keep doing that.</p>
+                    <p class="about-text">I'm a Computer Science graduate from Wilfrid Laurier University. Most of my work sits between backend systems and applied AI: chat backends that keep context, retrieval pipelines, and the caching and retry logic that makes them dependable.</p>
+                    <p class="about-text">I like taking a project from a rough idea to something people actually use, and I'm looking for a software engineering role where I can keep doing that.</p>
 
-                    <dl class="skills reveal">
+                    <dl class="skills">
                         <div><dt>Languages</dt><dd>Python, Java, JavaScript, TypeScript, SQL, C#, C++, C</dd></div>
                         <div><dt>Backend</dt><dd>Node.js, Express, FastAPI, Django, Spring Boot, PostgreSQL, MySQL, MongoDB, Redis</dd></div>
                         <div><dt>AI / ML</dt><dd>LLMs, RAG, NLP, TensorFlow, scikit-learn, pandas, NumPy</dd></div>
@@ -98,25 +98,25 @@
 
         <section id="experience" class="section">
             <div class="container split">
-                <h2 class="section-label">Experience</h2>
+                <h2 class="section-label">Experience &amp; education</h2>
                 <div>
-                    <article class="job reveal">
+                    <article class="job">
                         <header class="job-head">
                             <h3>Software Engineering Intern <span>· myAIpathway Inc.</span></h3>
-                            <p class="meta">May – Dec 2025 · Remote</p>
+                            <p class="meta">May to Dec 2025 · Remote</p>
                         </header>
                         <ul class="job-points">
                             <li>Designed an indexed MySQL schema that sped up log retrieval by 40%, and built a product cache that cut overhead by 60%.</li>
-                            <li>Built a Node.js/Express backend for an AI support system with multi-turn conversations and dynamic prompt generation.</li>
-                            <li>Integrated LLMs with retry logic for rate-limit errors, plus a stateless API to track session handoffs.</li>
-                            <li>Wrote an LLM context engine using a GPT tokenizer and sliding-window truncation so every prompt stays within the model's limit.</li>
+                            <li>Built a Node.js/Express backend for an AI support system that handles long conversations and generates prompts on the fly.</li>
+                            <li>Integrated LLMs with retry logic for rate limit errors, plus a stateless API to track session handoffs.</li>
+                            <li>Wrote an LLM context engine using a GPT tokenizer and sliding window truncation so every prompt stays within the model's limit.</li>
                         </ul>
                     </article>
 
-                    <article class="job reveal">
+                    <article class="job">
                         <header class="job-head">
                             <h3>B.Sc. Computer Science <span>· Wilfrid Laurier University</span></h3>
-                            <p class="meta">2022 – 2026</p>
+                            <p class="meta">2022 to 2026</p>
                         </header>
                     </article>
                 </div>
@@ -127,7 +127,7 @@
             <div class="container">
                 <h2 class="section-label">Selected work</h2>
 
-                <article class="feature reveal">
+                <article class="feature">
                     <div class="viz viz-feed" aria-hidden="true">
                         <div class="viz-head"><span>feed · user 42</span><span class="live">live</span></div>
                         <ol class="feed-list">
@@ -138,17 +138,16 @@
                         </ol>
                     </div>
                     <div class="feature-copy">
-                        <p class="kicker">Ranking · caching · WebSockets</p>
-                        <h3>AI-powered feed engine</h3>
+                        <h3>AI powered feed engine</h3>
                         <p>A FastAPI service that ranks posts per user by interest match, quality, recency, and click history, then diversifies topics so one subject can't take over. Feeds are cached in Redis and invalidated on every click, new posts are pushed to interested users over WebSockets, and Locust simulates traffic against it.</p>
                         <ul class="tags"><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>WebSockets</li><li>Locust</li></ul>
-                        <a class="link" href="https://github.com/Hashimiite/personalized-feed-engine" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
+                        <a class="link" href="https://github.com/Hashimiite/personalized-feed-engine" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for AI powered feed engine, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
                     </div>
                 </article>
 
-                <article class="feature feature-flip reveal">
+                <article class="feature feature-flip">
                     <div class="viz viz-sync" aria-hidden="true">
-                        <div class="viz-head"><span># cp-312 study group</span><span class="online">3 online</span></div>
+                        <div class="viz-head"><span># CP312 study group</span><span class="online">3 online</span></div>
                         <div class="sync-body">
                             <div class="match">
                                 <p class="match-label">Top match</p>
@@ -162,25 +161,24 @@
                             <div class="chat anim">
                                 <p class="msg">anyone free for the midterm review?</p>
                                 <p class="msg me">yes, library at 4. uploading notes</p>
-                                <p class="msg file me">📄 recurrences.pdf</p>
+                                <p class="msg file me"><svg class="file-icon" viewBox="0 0 12 14" aria-hidden="true"><path d="M2 .5h5.5L11 4v9.5H2z M7.5 .5V4H11"/></svg>recurrences.pdf</p>
                                 <p class="msg">perfect, see you there</p>
                             </div>
                         </div>
                     </div>
                     <div class="feature-copy">
-                        <p class="kicker">Matching · realtime · Postgres</p>
                         <h3>StudySync</h3>
-                        <p>A Next.js and Supabase app that pairs students with study partners. A Postgres function scores matches on shared courses, overlapping study times, and learning style. Group chat and file sharing stream live over Supabase Realtime, triggers raise notifications, and row-level security guards every table.</p>
+                        <p>A Next.js and Supabase app that pairs students with study partners. A Postgres function scores matches on shared courses, overlapping study times, and learning style. Group chat and file sharing stream live over Supabase Realtime, triggers raise notifications, and Postgres security policies guard every table.</p>
                         <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Postgres</li><li>Realtime</li></ul>
                         <p class="links">
-                            <a class="link" href="https://studysync-hashimi.vercel.app" target="_blank" rel="noopener noreferrer">Live demo <span aria-hidden="true">↗</span></a>
-                            <a class="link" href="https://github.com/Hashimiite/StudySync" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
+                            <a class="link" href="https://studysync-hashimi.vercel.app" target="_blank" rel="noopener noreferrer">Live demo<span class="sr-only"> of StudySync, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
+                            <a class="link" href="https://github.com/Hashimiite/StudySync" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for StudySync, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
                         </p>
                     </div>
                 </article>
 
                 <div class="more">
-                    <article class="mini reveal">
+                    <article class="mini">
                         <div class="viz viz-attn" aria-hidden="true">
                             <svg viewBox="0 0 544 260" class="anim">
                                 <g class="faint"><line x1="92" y1="92" x2="212" y2="172"/><line x1="212" y1="92" x2="92" y2="172"/><line x1="332" y1="92" x2="452" y2="172"/><line x1="452" y1="92" x2="332" y2="172"/><line x1="92" y1="92" x2="332" y2="172"/></g>
@@ -193,14 +191,13 @@
                                 <text class="note" x="20" y="242">8 heads · 6 layers · d_model 512</text>
                             </svg>
                         </div>
-                        <p class="kicker">Transformer · TensorFlow</p>
                         <h3>Neural machine translator</h3>
-                        <p>An English-to-French Transformer built from scratch in TensorFlow: multi-head attention, positional encoding, masking, and the warm-up learning-rate schedule from the original paper. Six encoder and decoder layers, trained on WMT14 with subword tokenizers.</p>
+                        <p>An English to French Transformer built from scratch in TensorFlow, with eight attention heads, positional encoding, masking, and the learning rate warmup schedule from the original paper. Six encoder and decoder layers, trained on WMT14 with subword tokenizers.</p>
                         <ul class="tags"><li>TensorFlow</li><li>Python</li><li>NLP</li></ul>
-                        <a class="link" href="https://github.com/Hashimiite/Neural-Machine-Translation-System" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
+                        <a class="link" href="https://github.com/Hashimiite/Neural-Machine-Translation-System" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for Neural machine translator, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
                     </article>
 
-                    <article class="mini reveal">
+                    <article class="mini">
                         <div class="viz viz-chart" aria-hidden="true">
                             <svg viewBox="0 0 544 260" class="anim">
                                 <g class="grid"><line x1="24" y1="80" x2="520" y2="80"/><line x1="24" y1="140" x2="520" y2="140"/><line x1="24" y1="200" x2="520" y2="200"/></g>
@@ -212,13 +209,12 @@
                                 <text class="acc" x="420" y="44">forecast →</text>
                             </svg>
                         </div>
-                        <p class="kicker">Regression · forecasting</p>
                         <h3>Canadian property predictor</h3>
-                        <p>An end-to-end ML pipeline that predicts Canadian housing prices. Tuned Random Forest and Gradient Boosting models reached R² 0.89, and a Streamlit app runs what-if scenarios on the forecast.</p>
+                        <p>A complete ML pipeline that predicts Canadian housing prices. Tuned Random Forest and Gradient Boosting models reached R² 0.89, and a Streamlit app runs scenario analysis on the forecast.</p>
                         <ul class="tags"><li>scikit-learn</li><li>pandas</li><li>Streamlit</li></ul>
                     </article>
 
-                    <article class="mini reveal">
+                    <article class="mini">
                         <div class="viz viz-chess" aria-hidden="true">
                             <div class="board anim">
                                 <span class="sq from"></span>
@@ -228,22 +224,21 @@
                                 <span class="pc wn">♞</span>
                                 <span class="pc wk">♚</span>
                             </div>
-                            <p class="viz-note">negamax · α-β · depth 3</p>
+                            <p class="viz-note">negamax · αβ pruning · depth 3</p>
                         </div>
-                        <p class="kicker">Search · game engine</p>
                         <h3>Minimax chess engine</h3>
-                        <p>A Pygame chess game with full move rules, including castling, en passant, and pin detection. The AI searches three moves deep with negamax and alpha-beta pruning in its own process, so the board keeps animating while it thinks.</p>
+                        <p>A Pygame chess game with full move rules, including castling, en passant, and pin detection. The AI searches three moves deep with negamax and alpha beta pruning in its own process, so the board keeps animating while it thinks.</p>
                         <ul class="tags"><li>Python</li><li>Pygame</li><li>multiprocessing</li></ul>
-                        <a class="link" href="https://github.com/Hashimiite/Python-Chess-Engine" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
+                        <a class="link" href="https://github.com/Hashimiite/Python-Chess-Engine" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for Minimax chess engine, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
                     </article>
 
-                    <article class="mini reveal">
+                    <article class="mini">
                         <div class="viz viz-ad" aria-hidden="true">
                             <div class="ad-page anim">
-                                <p class="ad-url">news-site.example/article</p>
+                                <p class="ad-url">dailynews.example/article</p>
                                 <div class="ad-text"><i></i><i></i><i></i></div>
                                 <div class="ad-slot side"><span class="ad-live">ad</span><span class="ad-gone">ad removed<small>doubleclick.net</small></span></div>
-                                <div class="ad-slot wide"><span class="ad-live">tracking pixel</span><span class="ad-gone">tracker blocked<small>google-analytics.com</small></span></div>
+                                <div class="ad-slot wide"><span class="ad-live">tracking pixel</span><span class="ad-gone">tracker blocked<small>googletagmanager.com</small></span></div>
                             </div>
                             <div class="ad-popup">
                                 <p class="ad-name">AdBlocker Pro</p>
@@ -254,11 +249,10 @@
                                 <p class="ad-toggle"><i></i>on</p>
                             </div>
                         </div>
-                        <p class="kicker">Chrome extension · Manifest V3</p>
                         <h3>AdBlocker Pro</h3>
-                        <p>A Chrome extension that blocks ad, tracker, and social-widget requests at the network layer with declarativeNetRequest, then removes ad elements and iframes that pages inject later. The popup counts blocks today and all time, with a per-site whitelist.</p>
+                        <p>A Chrome extension that blocks ad, tracker, and social widget requests at the network layer with declarativeNetRequest, then removes ad elements and iframes that pages inject later. The popup counts blocks today and all time, with a whitelist for trusted sites.</p>
                         <ul class="tags"><li>JavaScript</li><li>Chrome MV3</li><li>declarativeNetRequest</li></ul>
-                        <a class="link" href="https://github.com/Hashimiite/Custom-AdBlocker" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
+                        <a class="link" href="https://github.com/Hashimiite/Custom-AdBlocker" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for AdBlocker Pro, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
                     </article>
                 </div>
             </div>
@@ -267,15 +261,15 @@
         <section id="contact" class="section contact">
             <div class="container">
                 <h2 class="section-label">Contact</h2>
-                <p class="contact-lead reveal">I'm looking for full-time software engineering roles. The fastest way to reach me is email.</p>
-                <div class="contact-row reveal">
+                <p class="contact-lead">I'm looking for software engineering roles. The fastest way to reach me is email.</p>
+                <div class="contact-row">
                     <a class="email" href="mailto:hashimabdigani2@gmail.com">hashimabdigani2@gmail.com</a>
                     <button class="btn btn-ghost copy" type="button" data-copy="hashimabdigani2@gmail.com">Copy</button>
                     <span class="copy-status" role="status" aria-live="polite"></span>
                 </div>
-                <ul class="social reveal">
-                    <li><a href="https://www.linkedin.com/in/hashim-jama/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
-                    <li><a href="https://github.com/Hashimiite" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+                <ul class="social">
+                    <li><a href="https://www.linkedin.com/in/hashim-jama/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only">, opens in a new tab</span> <span aria-hidden="true">↗</span></a></li>
+                    <li><a href="https://github.com/Hashimiite" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only">, opens in a new tab</span> <span aria-hidden="true">↗</span></a></li>
                 </ul>
             </div>
         </section>
@@ -288,6 +282,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=2" defer></script>
+    <script src="script.js?v=4" defer></script>
 </body>
 </html>

@@ -14,15 +14,10 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && links.classList.contains('open')) { setMenu(false); toggle.focus(); }
 });
 
-// Scroll reveals, and animations that only run while on screen
-const revealer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); revealer.unobserve(e.target); } });
-}, { rootMargin: '0px 0px -10% 0px' });
-document.querySelectorAll('.reveal').forEach(el => revealer.observe(el));
-
+// Visual animations start the first time they scroll into view, then play once
 const player = new IntersectionObserver(entries => {
-    entries.forEach(e => e.target.classList.toggle('is-playing', e.isIntersecting));
-});
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-playing'); player.unobserve(e.target); } });
+}, { threshold: 0.4 });
 document.querySelectorAll('.anim').forEach(el => player.observe(el));
 
 // Highlight the nav link for the section in view
@@ -50,28 +45,32 @@ copyBtn.addEventListener('click', async () => {
     setTimeout(() => { copyStatus.textContent = ''; }, 2500);
 });
 
-// Feed visual: re-score and re-rank rows while visible
-// ponytail: random scores are decorative; swap for a recorded sample if you want real data
+// Feed visual: replay a fixed re-ranking (three score updates) the first time it is seen
 const feed = document.querySelector('.feed-list');
 if (feed && !reduceMotion) {
     const rows = [...feed.children];
-    let visible = false;
-    new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(feed);
-    setInterval(() => {
-        if (!visible) return;
-        rows.forEach(r => { r.querySelector('b').textContent = (0.4 + Math.random() * 0.58).toFixed(2); });
+    const steps = [[0.88, 0.79, 0.93, 0.61], [0.86, 0.95, 0.90, 0.58], [0.84, 0.97, 0.89, 0.71]];
+    const rank = scores => {
+        rows.forEach((r, i) => { r.querySelector('b').textContent = scores[i].toFixed(2); });
         [...rows].sort((a, b) => b.querySelector('b').textContent - a.querySelector('b').textContent)
             .forEach((r, i) => {
                 r.style.transform = `translateY(${i * 56}px)`;
                 r.classList.toggle('top', i === 0);
             });
-    }, 2600);
+    };
+    new IntersectionObserver(([e], obs) => {
+        if (!e.isIntersecting) return;
+        obs.disconnect();
+        steps.forEach((scores, i) => setTimeout(() => rank(scores), 1400 + i * 2200));
+    }, { threshold: 0.5 }).observe(feed);
 }
 
-// AdBlocker visual: tick the "blocked today" counter while visible
+// AdBlocker visual: count the two blocks the first time it is seen
 const adCount = document.querySelector('.ad-count');
 if (adCount && !reduceMotion) {
-    let n = +adCount.dataset.count, adVisible = false;
-    new IntersectionObserver(([e]) => { adVisible = e.isIntersecting; }).observe(adCount);
-    setInterval(() => { if (adVisible) adCount.textContent = ++n; }, 1800);
+    new IntersectionObserver(([e], obs) => {
+        if (!e.isIntersecting) return;
+        obs.disconnect();
+        [1600, 2400].forEach((ms, i) => setTimeout(() => { adCount.textContent = +adCount.dataset.count + i + 1; }, ms));
+    }, { threshold: 0.5 }).observe(adCount);
 }
