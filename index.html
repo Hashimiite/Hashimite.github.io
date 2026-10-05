@@ -91,8 +91,8 @@
                         <div><dt>Languages</dt><dd>Python, Java, TypeScript, JavaScript, SQL, C#, C++, C</dd></div>
                         <div><dt>Backend &amp; APIs</dt><dd>Node.js, Express, FastAPI, Django, Spring Boot, REST APIs, WebSockets</dd></div>
                         <div><dt>Frontend</dt><dd>React, Next.js, Astro, Tailwind CSS, HTML/CSS, AngularJS</dd></div>
-                        <div><dt>Data &amp; analytics</dt><dd>PostgreSQL, MySQL, MongoDB, Redis, pandas, NumPy, Matplotlib, Seaborn, Tableau, Power BI, Streamlit</dd></div>
-                        <div><dt>AI &amp; ML</dt><dd>LLM integration, RAG, NLP, TensorFlow, scikit-learn</dd></div>
+                        <div><dt>Data &amp; analytics</dt><dd>PostgreSQL, pgvector, MySQL, MongoDB, Redis, pandas, NumPy, Matplotlib, Seaborn, Tableau, Power BI, Streamlit</dd></div>
+                        <div><dt>AI &amp; ML</dt><dd>LLM integration, RAG, LangChain, LangGraph, semantic search, NLP, TensorFlow, scikit-learn</dd></div>
                         <div><dt>Deployment &amp; tooling</dt><dd>Docker, CI/CD pipelines, Git, Vercel, Supabase, GitHub Pages, Locust</dd></div>
                     </dl>
                 </div>
@@ -142,8 +142,8 @@
                     </div>
                     <div class="feature-copy">
                         <h3>AI powered feed engine</h3>
-                        <p>This FastAPI service builds a personalized feed for every user. Each post is scored on how well it matches the user's interests, its quality, how recent it is and how often it gets clicked. The feed then mixes in other topics so no single subject takes over. Feeds are cached in Redis and refreshed whenever a user clicks something. New posts reach interested users right away over WebSockets. The whole stack runs in Docker Compose alongside Postgres and Redis. On every push, GitHub Actions lints the code, runs the tests against real databases and starts the full stack as a smoke test.</p>
-                        <ul class="tags"><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>WebSockets</li><li>Docker</li><li>GitHub Actions</li></ul>
+                        <p>This FastAPI service ranks each user's feed by meaning rather than keywords. Posts and interests are embedded with a local language model through LangChain and compared in pgvector, so someone interested in machine learning also sees neural network research. Clicks shift each profile over time. A LangGraph assistant answers questions about the feed and cites the posts it used. The stack runs in Docker Compose. GitHub Actions tests it against real databases on every push.</p>
+                        <ul class="tags"><li>FastAPI</li><li>LangChain</li><li>LangGraph</li><li>pgvector</li><li>Redis</li><li>Docker</li><li>GitHub Actions</li></ul>
                         <p class="links">
                             <a class="link" href="https://github.com/Hashimiite/personalized-feed-engine" target="_blank" rel="noopener noreferrer">Source on GitHub<span class="sr-only"> for AI powered feed engine, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
                             <a class="link" href="https://github.com/Hashimiite/personalized-feed-engine/actions/workflows/ci.yml" target="_blank" rel="noopener noreferrer">CI runs<span class="sr-only"> for AI powered feed engine, opens in a new tab</span> <span aria-hidden="true">↗</span></a>
